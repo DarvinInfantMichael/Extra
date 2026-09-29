@@ -70,10 +70,10 @@ try {
     }
 }
 
-export const dashboard = async()=>{
+export const dashboard = async(req,res)=>{
     try {
 
-        const{UserName,UserEmail}= req.body;
+        return res.status(200).json({msg:req.check});
         
     } catch (error) {
 
