@@ -69,3 +69,15 @@ try {
         
     }
 }
+
+export const dashboard = async()=>{
+    try {
+
+        const{UserName,UserEmail}= req.body;
+        
+    } catch (error) {
+
+        res.status(500).json({msg:"Server Error"});
+        
+    }
+}
