@@ -52,6 +52,9 @@ try {
             
         }
 
+        const Acc=jwt.sign({id:check._id,name:check.UserName,email:check.UserEmail},process.env.ACCESS_KEY,{expiresIn:"1H"});
+        const Ree=jwt.sign({id:check._id,name:check.UserName,email:check.UserEmail},process.env.REFERENCE_KEY,{expiresIn:"1H"});
+
         const comp = await bcrypt.compare(UserPassword,check.UserPassword);
         if(!comp){
 
